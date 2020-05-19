@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sports</title>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <!-- 사용자 자바스크립트 -->
+  <script src="js/main.js"></script>
+
+  <style>
+
+    * {
+      margin: 0 auto; padding: 0;
+    }
+    
+    a { text-decoration: none;}
+    ul { list-style-type: none;}
+    
+    body {
+      font-size: 18px;
+      font-family: 'Noto Sans KR', sans-serif;
+      width: 1200px;
+      color: #333;
+      position: relative;
+    }
+    
+    #abcd1 img{
+      margin: 25px;
+    }
+
+    nav{
+        width: 780px;
+    }
+    #main_header {
+      width: 1200px; height: 100px;
+      position: relative;  
+    }
+    
+    #gnb {
+      position: absolute;
+      left: 350px; top: 40px;
+      margin-left:140px ;
+      
+    }
+    #gnb > ul > li {
+      display: inline-block;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+    #gnb > ul > li a { 
+        
+        color: #333; 
+      }
+  
+    #visual{
+        margin: 0 auto;
+    }
+   
+    #btn2{
+        display: none;
+        width: 100px;
+        height: 100px;
+    }
+    input{
+        float: right;
+        right: 0;
+        width: 130px;
+        height: 20px;
+        margin-top: 45px;
+       
+    }
+    #buy .box{
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        left: 100px;
+        background: #000;
+        
+        border-radius: 20px;
+        text-align: center;
+        
+        top: 600px;
+    }
+    #buy .box a p{
+      padding-top: 15px;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    #mid ul li{
+        display: inline-block;
+        font-weight: bold;
+        float: left;
+        position: relative;
+        left: 20px;
+        top: -100px;
+        margin-right: 20px;
+       
+    }
+    .last ul li a img{
+        width: 20px;
+        height: 20px;
+        float: left;
+        display: inline-block;
+    }
+
+
+    
+    
+    
+
+   
+   
+  
+    </style>
+</head>
+
+
+<body>
+
+<div class="header_wrap">
+<header id="main_header">
+    <form action="">
+    
+    </form>
+<a id="abcd1" href="./index.html">
+    <img src="logo.png"  alt="">
+</a>
+      <nav id="gnb">
+        <ul id="btn1">
+          <li><a href="#">신상품</a>
+            <ul id="btn2">
+                <li>남성 신상품</li>
+                <li>여성 신상품</li>
+                <li>키즈 신상품</li>
+            </ul>
+        </li>
+          <li><a href="#">신발</a>
+            <ul id="btn2">
+                <li>남성 신발</li>
+                <li>여성 신발</li>
+                <li>키즈 신발</li>
+            </ul>
+            </li>
+          <li><a href="#">의류</a>
+            <ul id="btn2">
+                <li>남성 상의</li>
+                <li>남성 하의</li>
+                <li>여성 상의</li>
+                <li>여성 하의</li>
+               
+            </ul>
+        </li>
+       
+     </ul>
+        
+</nav>
+</header>
+  </div>
+ 
+
+  <section id="visual">
+
+    <div class="sale">
+    <video src="video_title.mp4" autoplay type="video/mp4"></video>
+    <span>50%</span>
+    <p>REVERSE SALE</p>
+    </div>
+
+</section>
+
+
+  <section id="buy">
+      <div class="box">
+      <a href=""><p>50% 할인구매하기</p></a> 
+      </div>
+  </section>
+
+<section id="mid">
+    <ul>
+        <li>매장안내</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+    </ul>
+
+</section>
+
+
+
+  
+  
+</body>
+
+
+<script>
+    $(function(){
+
+ $('#gnb .btn2').hide();
+
+ 
+ $('#gnb .btn1 > li').hover(
+
+     function(){
+         
+         $(this)
+             .children('.btn2')
+             .stop().slideDown();
+     },
+ 
+     function(){
+         $('#gnb .btn2').stop().slideUp();
+     },
+ );
+})
+</script>
+</html>
